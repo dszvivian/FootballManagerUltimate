@@ -2,6 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
+
+body{
+    background-color: rgba(0,0,0,1)
+}
+
 .hero{
     height:100%;
     width:100%;
