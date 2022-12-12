@@ -1,0 +1,35 @@
+*{
+            padding: 0px;
+            margin:0px;
+        }
+         .hero{
+            height: 100%;
+            width:100%;
+            background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("league.jpeg");
+            position:absolute;
+            background-size: cover;
+            background-position: center;
+        }
+        .box{
+            position: relative;
+            height: 350px;
+            width:280px;
+            background-color: rgb(160, 223, 223);
+            margin:10% auto;
+            border-radius: 10px;
+            justify-content: center;
+        }
+      .btn{
+        width: 240px;
+        padding: 15px;
+        margin: 6% 8%;
+        border-radius: 10px;
+         background:linear-gradient(to right,#dd4b7c,#e6b044);
+        font-size: 17px;
+         cursor: pointer;
+      }
+      .top{
+        padding:20px;
+        display: flex;
+        justify-content: center;
+      }
