@@ -17,14 +17,14 @@
         <button type="button" class="toggle-btn" onclick="register()">Register</button>
       </div>
       <form id="login" class="input-group">
-        <input type="text" class="input-field" placeholder="User name" required>
-        <input type="text" class="input-field" placeholder="Password" required>
-        <button type="submit" class="submit-btn">Log in</button>
+        <input id="loginEmail" type="email" class="input-field" placeholder="Email" required>
+        <input id="loginPassword" type="password" class="input-field" placeholder="Password" required>
+        <button id="btnLogin" type="submit" class="submit-btn">Log in</button>
       </form>
       <form id="register" class="input-group">
-        <input type="text" class="input-field" placeholder="User name" required>
-        <input type="email" class="input-field" placeholder="Email Id" required>
-        <input type="text" class="input-field" placeholder="Password" required>
+        <input id="registerUsername" type="text" class="input-field" placeholder="User name" required>
+        <input id="registerEmail" type="email" class="input-field" placeholder="Email Id" required>
+        <input id="registerPassword" type="password" class="input-field" placeholder="Password" required>
         <button  id="btnRegister" type="submit" class="submit-btn">Register</button>
       </form>
       <div class="logo">
@@ -33,7 +33,30 @@
     </div>
       </div>
 
-   <script src="./javascript/login.js"></script>
+   <script>
+
+    // toggle function implementation
+
+      var x=document.getElementById("login");
+      var y=document.getElementById("register");
+      var z=document.getElementById("btn");
+
+      function register(){
+          x.style.left="-400px";
+          y.style.left="50px";
+          z.style.left="110px";
+      }
+
+      function login(){
+          x.style.left="50px";
+          y.style.left="450px";
+          z.style.left="0";
+      }
+
+   </script>
+
+   <!-- <script src="./javascript/login.js" type="module"></script> -->
+   <script src="./app.js" ></script>
 
 </body>
 </html>

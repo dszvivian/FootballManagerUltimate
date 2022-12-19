@@ -1,20 +1,25 @@
-var x=document.getElementById("login");
-var y=document.getElementById("register");
-var z=document.getElementById("btn");
+// import { addNewUser } from '../app.js';
 
-function register(){
-    x.style.left="-400px";
-    y.style.left="50px";
-    z.style.left="110px";
-}
+// let btnRegister = document.getElementById("btnRegister");
+// let btnLogin = document.getElementById("btnLogin");
 
-function login(){
-    x.style.left="50px";
-    y.style.left="450px";
-    z.style.left="0";
-}
+// let registerUsername;
+// let registerEmail;
+// let registerPassword;
 
 
 
-document.getElementById("btnRegister");
+// btnRegister.addEventListener("click",() => {
 
+//     registerUsername = document.getElementById("registerUsername").innerHTML;
+//     registerEmail = document.getElementById("registerEmail").innerHTML;
+//     registerPassword = document.getElementById("registerPassword").innerHTML;
+
+//     if(registerEmail == "" || registerPassword == "" || registerUsername == ""){
+//         alert("Please fill all the fields");
+//         return;
+//     }else{
+//         addNewUser(registerUsername,registerEmail,registerPassword);
+//     }
+
+// })

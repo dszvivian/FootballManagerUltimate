@@ -1,5 +1,5 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const express =  require('express');
+const bodyParser =  require('body-parser');
 const mysql = require('mysql');
 const { url } = require('inspector');
 
@@ -17,48 +17,122 @@ const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'nodejs_beers'
+    database: 'footballmanagerdb'
 });
 
 //select * from beers ;
-app.get('', (req,res)=>{
+// app.get('', (req,res)=>{
     
-    pool.getConnection((err , connection)=>{
-        if(err) throw err;
-        console.log(`Conneted as id ${pool.threadId}`)
+//     pool.getConnection((err , connection)=>{
+//         if(err) throw err;
+//         console.log(`Conneted as id ${pool.threadId}`)
 
 
-        // query(sqlString)
+//          query(sqlString)
 
-        connection.query('SELECT * FROM beers', (err, results) => {
-            if(!err){
-                res.send(results);
-            }else{
-                console.log(err);
-            }
-        });
+//         connection.query('SELECT * FROM beers', (err, results) => {
+//             if(!err){
+//                 res.send(results);
+//             }else{
+//                 console.log(err);
+//             }
+//         });
+
+//     })
+
+// })
+
+// app.get('/id', (req,res)=>{
+    
+//     pool.getConnection((err , connection)=>{
+//         if(err) throw err;
+//         console.log(`Conneted as id ${pool.threadId}`)
+
+
+//          query(sqlString)
+
+//         connection.query('SELECT * FROM beers where id=1', (err, results) => {
+//             if(!err){
+//                 res.send(results);
+//             }else{
+//                 console.log(err);
+//             }
+//         });
+
+//     })
+
+// })
+
+
+// app.post('/', function(req, res){
+    
+//     pool.getConnection((err, connection)=>{
+
+//         if(err) throw err;
+//         console.log(`Conneted as id ${pool.threadId}`)
+
+// query(sqlString)
+
+//         connection.query('INSERT INTO `beers` (`id`, `name`, `tagline`, `description`, `image`) VALUES (NULL, "hello", "beer", "erw", "hhhh")' , (err,results)=>{
+//             if(!err){
+//                 res.send(results);
+//             }else{
+//                 console.log(err);
+//             }
+//         } )
+//     })
+
+// })
+
+
+// post: new User 
+
+function addNewUser(username,email,password){
+
+    app.post('/users', function(req, res){
+        pool.getConnection((err, connection)=>{
+                if(err) throw err;
+                console.log(`Conneted as id ${pool.threadId}`)
+
+                // query(sqlString)
+
+                connection.query('INSERT INTO `users` (`username`, `email`, `password`) VALUES(username, email,password)',(err,result) => {
+                    if(!err){
+                        res.send(result);
+                    }else{
+                        alert(err.message);
+                    }
+
+                })
+
+        })
 
     })
 
-})
 
-app.get('/id', (req,res)=>{
-    
-    pool.getConnection((err , connection)=>{
-        if(err) throw err;
-        console.log(`Conneted as id ${pool.threadId}`)
+}
 
 
-        // query(sqlString)
+let btnRegister = document.getElementById("btnRegister");
+let btnLogin = document.getElementById("btnLogin");
 
-        connection.query('SELECT * FROM beers where id=1', (err, results) => {
-            if(!err){
-                res.send(results);
-            }else{
-                console.log(err);
-            }
-        });
+let registerUsername;
+let registerEmail;
+let registerPassword;
 
-    })
+
+
+btnRegister.addEventListener("click",() => {
+
+    registerUsername = document.getElementById("registerUsername").innerHTML;
+    registerEmail = document.getElementById("registerEmail").innerHTML;
+    registerPassword = document.getElementById("registerPassword").innerHTML;
+
+    if(registerEmail == "" || registerPassword == "" || registerUsername == ""){
+        alert("Please fill all the fields");
+        return;
+    }else{
+        addNewUser(registerUsername,registerEmail,registerPassword);
+    }
 
 })
