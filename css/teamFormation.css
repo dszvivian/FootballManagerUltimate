@@ -14,7 +14,7 @@ header {
 }
 
 main {
-	padding: 5% 35%;
+	padding-top: 3rem;
 }
 
 .pitch {
@@ -24,7 +24,6 @@ main {
 	border-radius: 5px;
 	padding: 20px;
 	margin: 0 16px;
-	display: inline-block;
 }
 
 .pitch h4 {
