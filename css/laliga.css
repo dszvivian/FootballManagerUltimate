@@ -5,9 +5,9 @@
          .hero{
             height: 100%;
             width:100%;
-            background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("https://media.gettyimages.com/id/1268049818/photo/a-detail-view-of-the-champions-league-trophy-prior-to-the-uefa-champions-league-final-match.jpg?s=612x612&w=0&k=20&c=G51UDgJ_zBPnMVUysAcS9YOlYkDR4s6b1HUi2jUcmsI=");
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../resources/back.jpg");
             position:absolute;
-            background-size: cover;
+            background-size:cover;
             background-position: center;
         }
         .box{
