@@ -20,6 +20,15 @@ const pool = mysql.createPool({
     database: 'footballmanagerdb'
 });
 
+
+// let btnRegister = document.getElementById("btnRegister");
+// let btnLogin = document.getElementById("btnLogin");
+
+// let registerUsername;
+// let registerEmail;
+// let registerPassword;
+
+
 //select * from beers ;
 // app.get('', (req,res)=>{
     
@@ -87,7 +96,7 @@ const pool = mysql.createPool({
 
 // post: new User 
 
-function addNewUser(username,email,password){
+// function addNewUser(username,email,password){
 
     app.post('/users', function(req, res){
         pool.getConnection((err, connection)=>{
@@ -100,7 +109,7 @@ function addNewUser(username,email,password){
                     if(!err){
                         res.send(result);
                     }else{
-                        alert(err.message);
+                        console.log(err.message);
                     }
 
                 })
@@ -110,29 +119,25 @@ function addNewUser(username,email,password){
     })
 
 
-}
+// }
 
-
-let btnRegister = document.getElementById("btnRegister");
-let btnLogin = document.getElementById("btnLogin");
-
-let registerUsername;
-let registerEmail;
-let registerPassword;
+// addNewUser('dszvivian','dszvivian@gmail.com','dszvivian')
 
 
 
-btnRegister.addEventListener("click",() => {
 
-    registerUsername = document.getElementById("registerUsername").innerHTML;
-    registerEmail = document.getElementById("registerEmail").innerHTML;
-    registerPassword = document.getElementById("registerPassword").innerHTML;
 
-    if(registerEmail == "" || registerPassword == "" || registerUsername == ""){
-        alert("Please fill all the fields");
-        return;
-    }else{
-        addNewUser(registerUsername,registerEmail,registerPassword);
-    }
+// btnRegister.addEventListener("click",() => {
 
-})
+//     registerUsername = document.getElementById("registerUsername").innerHTML;
+//     registerEmail = document.getElementById("registerEmail").innerHTML;
+//     registerPassword = document.getElementById("registerPassword").innerHTML;
+
+//     if(registerEmail == "" || registerPassword == "" || registerUsername == ""){
+//         alert("Please fill all the fields");
+//         return;
+//     }else{
+//         addNewUser(registerUsername,registerEmail,registerPassword);
+//     }
+
+// })
