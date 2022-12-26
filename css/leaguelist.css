@@ -1,0 +1,37 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.hero{
+    height: 100%;
+    width:100%;
+    /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../resources/josemorinho.png"); */
+    background-image:url("../resources/josemorinho.png");
+    position: absolute;
+    background-position:right;
+    /* background-size: cover; */
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: rgb(50, 130, 126);
+}
+.box{
+    height: relative;
+    width: 240px;
+    background-color: rgb(221, 216, 210) ;
+    position:relative;
+    margin:12% 27%;
+    border-radius: 8px;
+}
+.top{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.btn{
+    width: 170px;
+    padding: 5px;
+    margin:8% 15%;
+    background: linear-gradient(to right,#dd4b7c,#e6b044);
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
