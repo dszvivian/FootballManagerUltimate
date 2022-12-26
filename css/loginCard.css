@@ -9,7 +9,7 @@ justify-content: center;
 margin: 100px auto;
 }
 .card{
-   height: 400px;
+   height:relative;
    width: 300px;
    background-color: wheat
 }
