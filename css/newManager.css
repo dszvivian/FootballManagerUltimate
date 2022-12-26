@@ -1,0 +1,72 @@
+body{
+    background-image:url("https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg?cs=srgb&dl=pexels-jonathan-petersson-399187.jpg&fm=jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+
+.leftImage{
+  float:left;  
+  margin-left:8rem;
+}
+
+.leftImage img{
+    width:relative;
+    height:100vh;
+}
+
+
+.rightform{
+    position:relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding:10rem; 
+}
+
+
+.formchild{
+    display:grid;
+    margin:1rem;
+}
+
+.formFields{
+    width:relative;
+    height:relative;
+    padding:2rem;
+    background-color:#ffffff;
+    border-radius: 30px;
+}
+
+
+
+.form-heading{
+    text-align:center;
+}
+
+.form-input{
+    align-items:center;
+    padding:1em;
+    margin:1em;
+}
+
+.form-submit{
+    align-items:center;
+    background-color:#00ffa1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight:bold;
+}
+
+
+@media only screen and (max-width:1000px) {
+
+    .leftImage{
+        display: none;
+    }
+
+    .formFields{
+        width:100vh;
+    }
+
+}
