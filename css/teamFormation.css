@@ -15,6 +15,7 @@ header {
 
 main {
 	padding-top: 3rem;
+	position: relative;
 }
 
 .pitch {
@@ -108,25 +109,34 @@ main {
 	background: #34495e;
 }
 
-p {
-	width: 355px;
-	height: 455px;
-	background: rgba(0, 0, 0, .6);
-	margin: 13px 16px;
-	border-radius: 5px;
-	padding: 20px;
-	display: inline-block;
-}
 
-p:after {
-	content: '';
-	position: absolute;
-	top: 87%;
-	margin: 0 0 0 160px;
-	width: 0;
-	height: 0;
-	opacity: 0.6;
-	border-bottom: solid 10px #000;
-	border-left: solid 20px transparent;
-	border-right: solid 20px transparent;
-}
+/* player card css */
+
+.card{
+	height: relative;
+	width: 300px;
+	background-color: wheat;
+	position:relative;
+	margin:auto;
+
+ }
+ .card h2{
+	 text-align: center;
+ }
+ .card ul li{
+	 list-style:none;
+	 font-size: 18px;
+	 padding: 10px;
+	 margin-left:10px;
+ }
+ .card-image{
+	 background-color: aqua;
+	 height: 190px;
+	 background-image: url("../resources/1496857460lionel-messi-png-2017.png");
+	 background-size: cover;
+	 margin-bottom: 10px;
+ }
+
+
+
+
