@@ -8,11 +8,32 @@
     <link rel="icon" href="./resources/soccer-field.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Football Manager Ultimate</title>
+    <style>
+        #wilson{
+            border:2px solid rgb(186, 38, 38);
+            background-color: rgb(87, 172, 108);
+            opacity:0.9;
+            margin-right: 150px;
+            border-radius: 15px;
+        }
+        .homeImage{
+            margin-left: 20px;
+        }
+        hr.h1{
+           border: 1px solid rgb(161, 41, 41);
+        }
+        .log img{
+            height:80px;
+        }
+    </style>
 </head>
 <body  class=" bg-cover bg-fixed bg-[url('https://cdn.pixabay.com/photo/2020/04/02/11/37/football-pitch-4994688_960_720.jpg')]">
     
-    <nav class="flex items-center justify-between py-3 bg-black">
-        <div class="font-extrabold p-3 pt 2 px-6 text-white">Football Manager</div>
+    <nav class="flex items-center justify-between bg-black">
+        <!-- <div class="font-extrabold p-3 pt 2 px-6 text-white">Football Manager</div> -->
+        <div class="log">
+            <img src="./resources/logo.jpeg" alt="">
+        </div>
 
         <div class="hidden md:flex items-center">
             <!-- <form class="mx-2" type="input" action="">
@@ -35,8 +56,9 @@
                 <img id="homeImage" src="./resources/1495644684fc-barcelona-2017-png-clipart.png">
             </div>
 
-            <div class="grid my-2 ">
-                <a class=" font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRed" href="#">Create New Team</a>
+            <div id="wilson" class="grid my-2 ">
+                <a class=" font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRed" href="newManager.html">Create New Team</a>
+                <hr class="h1">
                 <a href="pleague.html" class="font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRedLight" href="#">Top Leagues</a>
             </div>
 
