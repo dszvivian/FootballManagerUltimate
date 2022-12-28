@@ -11,9 +11,7 @@ fetch(
     return response.json();
   })
   .then(function (obj) {
-    console.log(obj.clubs[1].name);
-
-    
+       
 
     obj.clubs.forEach(element => {
         var li = document.createElement(
