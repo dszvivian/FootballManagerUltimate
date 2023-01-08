@@ -1,0 +1,1 @@
+CREATE TABLE `footballmanagerdb`.`users` ( `username` VARCHAR(50) NOT NULL ,  `email` VARCHAR(50) NOT NULL ,  `password` VARCHAR(255) NOT NULL ,    PRIMARY KEY  (`username`),    UNIQUE  `email` (`email`)) ENGINE = InnoDB;
