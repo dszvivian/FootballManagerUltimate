@@ -1,0 +1,12 @@
+.card{
+    margin: 1rem;
+}
+
+.player-list{
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+
+.player-list li{
+    list-style-type:none;
+}

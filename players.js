@@ -23,7 +23,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_176/176866.jpg"
 },
 {
-    "pid": 1,
+    "pid": 4,
     "pname": "Thibaut COURTOIS",
     "position": "gk",
     "country": "Thibaut COURTOIS",
@@ -31,7 +31,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_65/65793.jpg"
 },
 {
-    "pid": 1,
+    "pid": 5,
     "pname": "Mohamed SALAH",
     "position": "rw",
     "country": "Egypt",
@@ -39,7 +39,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_69/69529.jpg"
 },
 {
-    "pid": 1,
+    "pid": 6,
     "pname": "Kylian MBAPPÉ",
     "position": "lw",
     "country": "France",
@@ -47,7 +47,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_250/250043.jpg"
 },
 {
-    "pid": 1,
+    "pid": 7,
     "pname": "Lionel MESSI",
     "position": "rw",
     "country": "Argentina",
@@ -55,7 +55,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_10/10973.jpg"
 },
 {
-    "pid": 1,
+    "pid": 8,
     "pname": "Sadio MANÉ",
     "position": "lw",
     "country": "Senegal",
@@ -63,7 +63,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_145/145917.jpg"
 },
 {
-    "pid": 1,
+    "pid": 9,
     "pname": "VINÍCIUS JÚNIOR",
     "position": "lw",
     "country": "brazil",
@@ -71,7 +71,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_320/320787.jpg"
 },
 {
-    "pid": 1,
+    "pid": 10,
     "pname": "Robert LEWANDOWSKI",
     "position": "st",
     "country": "Poland",
@@ -79,7 +79,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_43/43411.jpg"
 },
 {
-    "pid": 1,
+    "pid": 11,
     "pname": "Karim BENZEMA",
     "position": "st",
     "country": "France",
@@ -87,7 +87,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_11/11490.jpg"
 },
 {
-    "pid": 1,
+    "pid": 12,
     "pname": "Harry KANE",
     "position": "st",
     "country": "England",
@@ -95,7 +95,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_128/128531.jpg"
 },
 {
-    "pid": 1,
+    "pid": 13,
     "pname": "NEYMAR",
     "position": "lw",
     "country": "Brazil",
@@ -103,7 +103,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_62/62381.jpg"
 },
 {
-    "pid": 1,
+    "pid": 14,
     "pname": "Cody GAKPO",
     "position": "lm",
     "country": "Netherlands",
@@ -111,7 +111,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_307/307369.jpg"
 },
 {
-    "pid": 1,
+    "pid": 15,
     "pname": "Heung-min SON",
     "position": "rm",
     "country": "South Korea",
@@ -119,7 +119,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_118/118783.jpg"
 },
 {
-    "pid": 1,
+    "pid": 16,
     "pname": "Serge GNABRY",
     "position": "rm",
     "country": "Germany",
@@ -127,7 +127,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_134/134532.jpg"
 },
 {
-    "pid": 1,
+    "pid": 17,
     "pname": "Bruno FERNANDES",
     "position": "cm",
     "country": "Portugal",
@@ -135,7 +135,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_184/184884.jpg"
 },
 {
-    "pid": 1,
+    "pid": 18,
     "pname": "Mohamed SALAH",
     "position": "rw",
     "country": "Egypt",
@@ -143,7 +143,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_69/69529.jpg"
 },
 {
-    "pid": 1,
+    "pid": 19,
     "pname": "Mohamed SALAH",
     "position": "rw",
     "country": "Egypt",
@@ -151,7 +151,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_69/69529.jpg"
 },
 {
-    "pid": 1,
+    "pid": 20,
     "pname": "Mohamed SALAH",
     "position": "rw",
     "country": "Egypt",
@@ -159,7 +159,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_69/69529.jpg"
 },
 {
-    "pid": 1,
+    "pid": 21,
     "pname": "Mohamed SALAH",
     "position": "rw",
     "country": "Egypt",
@@ -167,7 +167,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_69/69529.jpg"
 },
 {
-    "pid": 1,
+    "pid": 22,
     "pname": "Mohamed SALAH",
     "position": "rw",
     "country": "Egypt",
@@ -175,7 +175,7 @@ const playerData = [{
     "image": "https://www.footballdatabase.eu/images/photos/players/a_69/69529.jpg"
 },
 {
-    "pid": 1,
+    "pid": 23,
     "pname": "Mohamed SALAH",
     "position": "rw",
     "country": "Egypt",
@@ -185,3 +185,4 @@ const playerData = [{
 
 ]
 
+module.exports.playerData = playerData

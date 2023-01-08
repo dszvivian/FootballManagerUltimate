@@ -62,6 +62,22 @@ app.get('/registeruser', (req, res) =>{
 
 
 
+
+
+app.get("/newmanager",(req,res)=>{
+ 
+    
+    res.render("newmanager")
+})
+
+
+app.get("/globalplayers",(req,res)=>{
+ 
+    
+    res.render("globalplayers")
+})
+
+
 app.listen(port,() =>  console.log(`Listen on Port ${port}`));
 
 
