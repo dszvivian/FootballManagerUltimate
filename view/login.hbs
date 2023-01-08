@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+
+    
+
+
+</head>
+<body class="">
+   <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+      </div>
+      <form action="/loginuser" id="login" class="input-group">
+        <input id="loginEmail" type="email" class="input-field" name="email" placeholder="Email" required>
+        <input id="loginPassword" type="password" class="input-field" name="password" placeholder="Password" required>
+        <button id="btnLogin" type="submit" class="submit-btn" >Log in</button>
+      </form>
+      <form action="/registeruser" id="register" class="input-group">
+        <input id="registerUsername" type="text" class="input-field" name="username" placeholder="User name" required>
+        <input id="registerEmail" type="email" class="input-field" placeholder="Email Id" name="email" required>
+        <input id="registerPassword" type="password" class="input-field" placeholder="Password" name="password" required>
+        <button  id="btnRegister" type="submit" class="submit-btn">Register</button>
+      </form>
+      <div class="logo">
+        <img src="resources/logo.jpeg" alt="">
+      </div>
+    </div>
+      </div>
+
+   <script>
+
+    // toggle function implementation
+
+      var x=document.getElementById("login");
+      var y=document.getElementById("register");
+      var z=document.getElementById("btn");
+
+      function register(){
+          x.style.left="-400px";
+          y.style.left="50px";
+          z.style.left="110px";
+      }
+
+      function login(){
+          x.style.left="50px";
+          y.style.left="450px";
+          z.style.left="0";
+      }
+
+   </script>
+
+   
+
+  {{#if sucessRegister}}
+  <script>
+    alert("Registered Successfully");
+  </script>
+  {{/if}}
+
+  {{#if errRegister}}
+  <script>
+    alert("emailid/username already exists");
+  </script>
+  {{/if}}
+
+
+</body>
+</html>

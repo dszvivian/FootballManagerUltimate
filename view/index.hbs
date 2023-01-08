@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
-    <link rel="icon" href="./resources/soccer-field.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="soccer-field.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Football Manager Ultimate</title>
     <style>
@@ -32,7 +32,7 @@
     <nav class="flex items-center justify-between bg-black">
         <!-- <div class="font-extrabold p-3 pt 2 px-6 text-white">Football Manager</div> -->
         <div class="log">
-            <img src="./resources/logo.jpeg" alt="">
+            <img src="logo.jpeg" alt="">
         </div>
 
         <div class="hidden md:flex items-center">
@@ -41,8 +41,29 @@
                 <button class="font-medium bg-white px-2">Submit</button>
             </form> -->
 
-            <a href="login.html"  id="btnLogin" class="p-2 px-3 mx-2 text-white border-2 border-white" >Login</a>
-            <a href="login.html" id="btnRegister" class="p-3 pt-3 px-6 text-white mx-2 rounded-full">Register</a>
+            <a href="/login"  id="btnLogin" class="p-2 px-3 mx-2 text-white border-2 border-white" >Login</a>
+            <a href="/register" id="btnRegister" class="p-3 pt-3 px-6 text-white mx-2 rounded-full">Register</a>
+            {{#if sucessRegister}}
+                <script>
+                    const btnLogin = document.getElementById("btnLogin");
+                    const btnRegister = document.getElementById("btnRegister");
+
+                    btnLogin.style.display = "none";
+                    btnRegister.style.display = "none";
+                </script>
+             <a href="/register"  id="btnLogin" class="p-2 px-3 mx-2 text-white border-2 border-white" >Log Out</a>  
+            {{/if}}
+
+            {{#if sucessLogin}}
+                <script>
+                    const btnLogin = document.getElementById("btnLogin");
+                    const btnRegister = document.getElementById("btnRegister");
+
+                    btnLogin.style.display = "none";
+                    btnRegister.style.display = "none";
+                </script>
+             <a href="/register"  id="btnLogin" class="p-2 px-3 mx-2 text-white border-2 border-white" >Log Out</a>  
+            {{/if}}
         </div>
     </nav>
 
@@ -53,7 +74,7 @@
             
 
             <div  class="object-cover ">
-                <img id="homeImage" src="./resources/1495644684fc-barcelona-2017-png-clipart.png">
+                <img id="homeImage" src="1495644684fc-barcelona-2017-png-clipart.png">
             </div>
 
             <div id="wilson" class="grid my-2 ">
@@ -66,7 +87,9 @@
 
     </section>
 
+    
 
-    <script src="./javascript/main.js"></script>
+
+    <script src="main.js"></script>
 </body>
 </html>
