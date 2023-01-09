@@ -30,10 +30,19 @@ body{
     margin:1rem;
 }
 
-.formFields{
+#f1{
     width:relative;
     height:relative;
     padding:2rem;
+    background-color:#ffffff;
+    border-radius: 30px;
+}
+
+#f2{
+    width:relative;
+    height:relative;
+    padding:2rem;
+    margin-top:1rem;
     background-color:#ffffff;
     border-radius: 30px;
 }

@@ -1,17 +1,72 @@
-const playerData = require('../players.js').playerData
 
-function showCard(id) {
-    const matchedPlayerData = playerData.find((data) => data.id === id)
+const playerData = 'players.json';
 
-    const pName = document.getElementById("pName")
-    const pImage = document.getElementById("player-image")
-    const pCountry = document.getElementById("pCountry")
-    const pRating = document.getElementById("pRating")
+const list = document.getElementById("player-list");
 
-    pName.innerText = matchedPlayerData.pname
-    pCountry.innerText = matchedPlayerData.pCountry
-    pRating.innerText = matchedPlayerData.pRating
-    pImage.style.backgroundImage = `url(${matchedPlayerData.image})`
-}
 
-showCard(7)
+
+fetch(
+    `players.json`
+  )
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (obj) {
+
+        console.log(obj);
+         
+  
+      obj.forEach(element => {
+          var li = document.createElement(
+              `
+              <div class="card">
+                    <div id="card-image" class="card-image" style="background-image: url(${element.image});">
+                    </div>
+                    <h2 id="pname">${element.pname}</h2>
+                    <ul>
+                        <li id="pPosition" class="list">${element.position}</li>
+                        <li id="pCountry" class="list">${element.country}</li>
+                        <li id="pRating" class="list">${element.rating}</li>
+                    </ul>
+                </div>
+              `
+          );
+          
+          
+          ul.append(li)
+      });
+  
+  
+    });
+
+
+// playerData.forEach(element => {
+//     var li = document.createElement('li');
+//     list.appendChild(
+//         `
+            
+//         `
+//     )
+    
+// })
+
+
+
+// function showCard(id) {
+//     const matchedPlayerData = playerData.find((data) => data.pid === id)
+
+//     const pName = document.getElementById("pname")
+//     const pImage = document.getElementById("card-image")
+//     const pPosition = document.getElementById("pPosition")
+//     const pCountry = document.getElementById("pCountry")
+//     const pRating = document.getElementById("pRating")
+
+//     pName.innerText = `${matchedPlayerData.pname}`
+//     pPosition.innerText = `Position: ${matchedPlayerData.position}`
+//     pCountry.innerText = `Country: ${matchedPlayerData.country}`
+//     pRating.innerText = `Rating: ${matchedPlayerData.rating}`
+//     pImage.style.backgroundImage = `url(${matchedPlayerData.image})`
+
+//     console.log(pName)
+// }
+

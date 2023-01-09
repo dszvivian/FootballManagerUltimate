@@ -25,6 +25,10 @@
         .log img{
             height:80px;
         }
+
+        .afterlogin{
+            display:none;
+        }
     </style>
 </head>
 <body  class=" bg-cover bg-fixed bg-[url('https://cdn.pixabay.com/photo/2020/04/02/11/37/football-pitch-4994688_960_720.jpg')]">
@@ -50,6 +54,7 @@
 
                     btnLogin.style.display = "none";
                     btnRegister.style.display = "none";
+
                 </script>
              <a href="/register"  id="btnLogin" class="p-2 px-3 mx-2 text-white border-2 border-white" >Log Out</a>  
             {{/if}}
@@ -58,16 +63,21 @@
                 <script>
                     const btnLogin = document.getElementById("btnLogin");
                     const btnRegister = document.getElementById("btnRegister");
+                    const afterlogin = document.getElementById("afterlogin");
 
                     btnLogin.style.display = "none";
                     btnRegister.style.display = "none";
+
+                    afterlogin.style.display = "none";
+
+                    
                 </script>
              <a href="/register"  id="btnLogin" class="p-2 px-3 mx-2 text-white border-2 border-white" >Log Out</a>  
             {{/if}}
         </div>
     </nav>
 
-    <section>
+    <section id="afterlogin">
 
 
         <div class="grid justify-center w-screen md:flex items-center">
@@ -78,16 +88,14 @@
             </div>
 
             <div id="form-box" class="grid my-2 ">
-                <a class=" font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRed" href="newManager.html">Create New Team</a>
+                <a class="font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRed" href='/newmanager'>Create New Team</a>
                 <hr class="h1">
-                <a href="/globalplayers" class="font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRedLight" href="#">Top Leagues</a>
+                <a  class="font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRedLight" href="#">Top Leagues</a>
             </div>
 
         </div>
 
     </section>
-
-    
 
 
     <script src="main.js"></script>

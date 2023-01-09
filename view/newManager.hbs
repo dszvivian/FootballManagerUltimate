@@ -16,20 +16,58 @@
 
     <div class="rightform">
 
-        <div class="formFields">
-            <form class="formchild" action="" method="">
-                <h1  class="form-heading">𝐄𝐧𝐭𝐞𝐫 𝐌𝐚𝐧𝐚𝐠𝐞𝐫 𝐍𝐚𝐦𝐞</h1>
-                <input class="form-input"type="text" name="Manager name" id="">
-                <input type="text" placeholder="Enter Club Name">
-                <button  id="btnSubmitname" class="form-submit">Submit</button>
+        <div id="f1"class="formFields">
+            <form class="formchild" action="/managerinputs" method="">
+                <h1 id="formHeading"  class="form-heading">𝐄𝐧𝐭𝐞𝐫 𝐌𝐚𝐧𝐚𝐠𝐞𝐫 𝐍𝐚𝐦𝐞</h1>
+                <input class="form-input"type="text" name="managername" placeholder="Enter manager name" id="" required>
+                <input class="form-input"type="text" name="uid" placeholder="Enter UID" id="" required>
+                <button  id="btnSubmitname" class="form-submit">Submit</button>                
             </form>
         </div>
+
+        {{#if minput}}
+            <script>
+                let formfield = document.getElementById("f1");
+                let formfield2 = document.getElementById("f2");
+
+                formfield.style.display = "none";
+                formfield2.style.display = "block";
+            </script>
+
+        {{/if}}
+
+        <div id="f2" class="formField2">
+            <form class="formchild" action="/clubinputs" method="">
+                <h1 id="formHeading"  class="form-heading">𝐄𝐧𝐭𝐞𝐫 Club Details</h1>
+                <input class="form-input"type="text" name="clubname" placeholder="Enter Club name" id="" required>
+                <input class="form-input"type="text" name="clubformation" placeholder="Enter Club Formation" id="" required>
+                <input class="form-input"type="text" name="mid" placeholder="Enter Manager id" id="" required>
+                <button  id="btnSubmitname" class="form-submit">Submit</button>                
+            </form>
+        </div>
+
+        {{!-- {{#if minputErr}}
+            <script>
+                alert("Enter valid Details")
+            </script>
+        {{/if}}
+
+        {{#if minput}}
+        <script>
+            let formfield = document.getElementsByClassName("formFields");
+            let formfield2 = document.getElementsByClassName("formField2");
+
+            formfield.style.display = "none";
+            formfield2.style.display = "flex";
+        </script>
+
+        {{/if}} --}}
         
         
     </div>
 
 
-    <script src="newManager.js"></script>
+    {{!-- <script src="newManager.js"></script> --}}
 
 
 </body>
