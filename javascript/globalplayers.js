@@ -1,7 +1,7 @@
 
 const playerData = 'players.json';
 
-const list = document.getElementById("player-list");
+const list = document.getElementById("plist");
 
 
 
@@ -33,7 +33,7 @@ fetch(
           );
           
           
-          ul.append(li)
+          list.appendChild(li)
       });
   
   

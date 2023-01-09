@@ -42,8 +42,8 @@ app.get('/loginuser', (req, res) =>{
             res.render('login',{errlogin:true});
         }else{
             res.render('index',{sucessLogin:true})
-            // uid = result.RowDataPacket.uid;
-            console.log(result);
+            // uid = result.RowDataPacket.ui;
+            console.log(result[0].uid);
         }
     });
 
