@@ -29,16 +29,21 @@ app.get('/register', (req, res) =>{
     res.render('login')
 });
 
+
+// let uid = null;
+
 app.get('/loginuser', (req, res) =>{
     const {email,password} = req.query;
 
-    let qry = 'select * from users where email=? and password=?'
-
+    let qry = 'select * from users where uemail=? and upassword=?'
+    
     mysql.query(qry,[email,password],(err, result) =>{
         if(err){
             res.render('login',{errlogin:true});
         }else{
             res.render('index',{sucessLogin:true})
+            // uid = result.RowDataPacket.ui;
+            console.log(result[0].uid);
         }
     });
 
@@ -47,7 +52,7 @@ app.get('/loginuser', (req, res) =>{
 app.get('/registeruser', (req, res) =>{
     const {username,email,password} = req.query;
 
-    let qry = 'insert into users values(?,?,?)'
+    let qry = 'insert into users(username,uemail,upassword) values(?,?,?)'
 
     mysql.query(qry, [username, email, password],(err,results)=>{
         if (err){
@@ -55,25 +60,65 @@ app.get('/registeruser', (req, res) =>{
         }
         else{
             res.render("index", {sucessRegister:true});
+
+            let qry = 'select * from users where username=?'
+    
+            mysql.query(qry,[username],(err, result) =>{
+            if(err){
+                res.render('login',{errlogin:true});
+            }else{
+                res.render('index',{sucessLogin:true})
+                // uid = result.RowDataPacket.uid;
+                console.log(result)
+            }
+    });
+
         }
     });
 
 });
 
-
-
-
-
-app.get("/newmanager",(req,res)=>{
- 
-    
+app.get(`/newmanager`,(req,res)=>{
     res.render("newmanager")
+    // console.log(uid)
+})
+
+
+app.get("/managerinputs",(req,res)=>{
+    const {managername,uid} = req.query;
+
+    let qry = "insert into manager(mname,uid) values(?,?)"
+    
+    mysql.query(qry,[managername,uid],(err,result)=>{
+        if(err){
+            res.render('newmanager',{minputErr:true})
+        }else{
+            res.render('newmanager',{minput:true})
+        }
+    });
+
+
+})
+
+app.get('/clubinputs',(req, res)=>{
+
+    const {clubname,clubformation,mid} = req.query;
+ 
+    let qry = "insert into club(clubname,clubformation,mid) values(?,?,?)"
+    
+    mysql.query(qry,[clubname,clubformation,mid],(err,result)=>{
+        if(err){
+            res.render('teamFormation',{cinputErr:true})
+        }else{
+            res.render('teamFormation',{cinputErr:false})
+        }
+    });
+   
+
 })
 
 
 app.get("/globalplayers",(req,res)=>{
- 
-    
     res.render("globalplayers")
 })
 

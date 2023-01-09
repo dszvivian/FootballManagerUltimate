@@ -1,4 +1,4 @@
-const playerData = [{
+[{
     "pid": 1,
     "pname": "Diogo COSTA",
     "position": "gk",
@@ -181,8 +181,6 @@ const playerData = [{
     "country": "Egypt",
     "rating": "88",
     "image": "https://www.footballdatabase.eu/images/photos/players/a_69/69529.jpg"
-},
+}
 
 ]
-
-module.exports.playerData = playerData
