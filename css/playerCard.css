@@ -14,10 +14,18 @@ body{
 .card{
    height: relative;
    width: 300px;
-   background-color: wheat
+   background-color: wheat;
 }
+
 .card h2{
     text-align: center;
+}
+
+.card ul{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
 }
 .card ul li{
     list-style:none;
@@ -27,8 +35,17 @@ body{
 }
 .card-image{
     background-color: aqua;
-    height: 190px;
+    height: 250px;
     background-image: url("https://images.hindustantimes.com/img/2022/12/11/1600x900/WCup-Portugal-Switzerland-Soccer-486_1670481609197_1670481609197_1670736591154_1670736591154.jpg");
     background-size: cover;
     margin-bottom: 10px;
+}
+
+
+.card button {
+    background-color:#00ffa1;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight:bold;
+    text-align: center;
 }

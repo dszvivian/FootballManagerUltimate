@@ -10,3 +10,9 @@
 .player-list li{
     list-style-type:none;
 }
+
+body{
+    
+    background-image:url("https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg?cs=srgb&dl=pexels-jonathan-petersson-399187.jpg&fm=jpg");
+    /* background-image: linear-gradient(to right,black, #270C39); */
+}

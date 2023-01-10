@@ -1,7 +1,7 @@
 CREATE TABLE users ( 
     userid int not null auto_increment primary key, 
     username  VARCHAR(255) NOT NULL unique, 
-    email varchar not null unique,
+    email varchar(255) not null unique,
     uPassword INT NOT NULL );
 
 
@@ -19,3 +19,24 @@ create table club(
     clubformation varchar(10) not null,
     mid int not null, 
     foreign key(mid) references manager(mid) on delete cascade);
+
+
+create table clubformation(
+    column clubid int not null primary key,
+    gk int ,
+    lb int ,
+    lcb int ,
+    rcb int ,
+    rb int ,
+    lm int ,
+    cm int ,
+    rm int ,
+    lw int ,
+    st int ,
+    rw int ,
+    sub1 int ,
+    sub2 int ,
+    sub3 int ,
+    sub4 int ,
+    foreign key(clubid) references club(clubid) on delete cascade
+    );

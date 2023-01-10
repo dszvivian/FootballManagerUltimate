@@ -60,16 +60,95 @@ const playersData = [
 const card = document.getElementById("card")
 const player1 = document.getElementById("p1")
 const player2 = document.getElementById("p2")
+const player3 = document.getElementById("p3")
+const player4 = document.getElementById("p4")
+const player5 = document.getElementById("p5")
+const player6 = document.getElementById("p6")
+const player7 = document.getElementById("p7")
+const player8 = document.getElementById("p8")
+const player9 = document.getElementById("p9")
+const player10 = document.getElementById("p10")
+const player11 = document.getElementById("p11")
 
+
+//player 1
 player1.addEventListener("mouseover", function(){
     showCard(1)
 })
 player1.addEventListener("mouseout", hideCard)
 
+//player 2
 player2.addEventListener("mouseover", function(){
     showCard(2)
 })
 player2.addEventListener("mouseout", hideCard)
+
+//player 3 
+player3.addEventListener("mouseover", function(){
+    showCard(1)
+})
+player3.addEventListener("mouseout", hideCard)
+
+//player 4
+player4.addEventListener("mouseover", function(){
+    showCard(2)
+})
+player4.addEventListener("mouseout", hideCard)
+
+//player 5 
+player5.addEventListener("mouseover", function(){
+    showCard(1)
+})
+player5.addEventListener("mouseout", hideCard)
+
+
+//player 6
+player6.addEventListener("mouseover", function(){
+    showCard(2)
+})
+player6.addEventListener("mouseout", hideCard)
+
+//player 7
+player7.addEventListener("mouseover", function(){
+    showCard(1)
+})
+player7.addEventListener("mouseout", hideCard)
+
+
+//player7
+player7.addEventListener("mouseover", function(){
+    showCard(2)
+})
+player7.addEventListener("mouseout", hideCard)
+
+// player 8
+player8.addEventListener("mouseover", function(){
+    showCard(1)
+})
+player8.addEventListener("mouseout", hideCard)
+
+
+//player 9
+player9.addEventListener("mouseover", function(){
+    showCard(2)
+})
+player9.addEventListener("mouseout", hideCard)
+
+//player 10
+player10.addEventListener("mouseover", function(){
+    showCard(1)
+})
+player10.addEventListener("mouseout", hideCard)
+
+
+//player 11
+player11.addEventListener("mouseover", function(){
+    showCard(2)
+})
+player11.addEventListener("mouseout", hideCard)
+
+
+
 
 
 function showCard(id) {
