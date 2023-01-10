@@ -1,7 +1,7 @@
 CREATE TABLE users ( 
     userid int not null auto_increment primary key, 
     username  VARCHAR(255) NOT NULL unique, 
-    email varchar not null unique,
+    email varchar(255) not null unique,
     uPassword INT NOT NULL );
 
 

@@ -30,7 +30,7 @@ app.get('/register', (req, res) =>{
 });
 
 
-// let uid = null;
+let uid = null;
 
 app.get('/loginuser', (req, res) =>{
     const {email,password} = req.query;
@@ -42,8 +42,7 @@ app.get('/loginuser', (req, res) =>{
             res.render('login',{errlogin:true});
         }else{
             res.render('index',{sucessLogin:true})
-            // uid = result.RowDataPacket.ui;
-            console.log(result[0].uid);
+            uid = result[0].uid;
         }
     });
 
@@ -68,8 +67,7 @@ app.get('/registeruser', (req, res) =>{
                 res.render('login',{errlogin:true});
             }else{
                 res.render('index',{sucessLogin:true})
-                // uid = result.RowDataPacket.uid;
-                console.log(result)
+                uid = result[0].uid;
             }
     });
 
@@ -80,12 +78,13 @@ app.get('/registeruser', (req, res) =>{
 
 app.get(`/newmanager`,(req,res)=>{
     res.render("newmanager")
-    // console.log(uid)
 })
 
 
+let mid = null;
+
 app.get("/managerinputs",(req,res)=>{
-    const {managername,uid} = req.query;
+    const {managername} = req.query;
 
     let qry = "insert into manager(mname,uid) values(?,?)"
     
@@ -94,6 +93,16 @@ app.get("/managerinputs",(req,res)=>{
             res.render('newmanager',{minputErr:true})
         }else{
             res.render('newmanager',{minput:true})
+
+            mysql.query("select mid from mananger where uid=?",[uid],(err, result) =>{
+                if(err){
+                    res.render('login',{errlogin:true});
+                }else{
+                    res.render('index',{sucessLogin:true})
+                    mid = result[0].mid;
+                }})
+
+
         }
     });
 
@@ -102,7 +111,7 @@ app.get("/managerinputs",(req,res)=>{
 
 app.get('/clubinputs',(req, res)=>{
 
-    const {clubname,clubformation,mid} = req.query;
+    const {clubname,clubformation} = req.query;
  
     let qry = "insert into club(clubname,clubformation,mid) values(?,?,?)"
     

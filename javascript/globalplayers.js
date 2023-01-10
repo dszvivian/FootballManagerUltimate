@@ -1,24 +1,17 @@
-
-const playerData = 'players.json';
+const playerData = "players.json";
 
 const list = document.getElementById("plist");
 
+fetch(`players.json`)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (obj) {
+    console.log(obj);
 
-
-fetch(
-    `players.json`
-  )
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (obj) {
-
-        console.log(obj);
-         
-  
-      obj.forEach(element => {
-          var li = document.createElement(
-              `
+    obj.forEach((element) => {
+      var li = document.createElement("li");
+      li.innerHTML = `
               <div class="card">
                     <div id="card-image" class="card-image" style="background-image: url(${element.image});">
                     </div>
@@ -27,30 +20,24 @@ fetch(
                         <li id="pPosition" class="list">${element.position}</li>
                         <li id="pCountry" class="list">${element.country}</li>
                         <li id="pRating" class="list">${element.rating}</li>
+                        <button id=btnSign">Sign Contract</button>
                     </ul>
                 </div>
-              `
-          );
-          
-          
-          list.appendChild(li)
-      });
-  
-  
-    });
+              `;
 
+      list.appendChild(li);
+    });
+  });
 
 // playerData.forEach(element => {
 //     var li = document.createElement('li');
 //     list.appendChild(
 //         `
-            
+
 //         `
 //     )
-    
+
 // })
-
-
 
 // function showCard(id) {
 //     const matchedPlayerData = playerData.find((data) => data.pid === id)
@@ -69,4 +56,3 @@ fetch(
 
 //     console.log(pName)
 // }
-
