@@ -22,7 +22,7 @@ create table club(
 
 
 create table clubformation(
-    column clubid int not null primary key,
+    clubid int not null unique,
     gk int ,
     lb int ,
     lcb int ,
@@ -38,5 +38,6 @@ create table clubformation(
     sub2 int ,
     sub3 int ,
     sub4 int ,
+    -- Cannot add or update a child row: a foreign key constraint fails (`footballmanagerdb`.`clubformation`, CONSTRAINT `clubformation_ibfk_1` FOREIGN KEY (`clubid`) REFERENCES `club` (`clubid`) ON DELETE CASCADE)
     foreign key(clubid) references club(clubid) on delete cascade
     );

@@ -157,17 +157,18 @@ app.get('/signnewplayer',(req, res)=>{
 
 app.get('/signplayerwithpos',(req, res)=>{
     
-    const position = req.query;
+    const position = req.query.position;
+    console.log(position);
  
-    let qry = "insert into club(clubname,clubformation,mid) values(?,?,?)"
+    let qry = `insert into clubformation(${position}) values(?)`
     
-    mysql.query(qry,[clubname,clubformation,mid],(err,result)=>{
+    mysql.query(qry,[pid],(err,result)=>{
         if(err){
             console.log(err);
-            res.render('newManager')
+            res.render('teamFormation')
         }else{
-
-
+            
+            res.render('teamFormation')
         }
     });
 
