@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Football Manager Ultimate</title>
     <style>
-        #form-box{
+        #formbox{
             border:2px solid rgb(186, 38, 38);
             background-color: rgb(87, 172, 108);
             opacity:0.9;
@@ -25,25 +25,23 @@
         .log img{
             height:80px;
         }
+        
 
-        .afterlogin{
-            display:none;
-        }
+
+
+        
+
     </style>
 </head>
 <body  class=" bg-cover bg-fixed bg-[url('https://cdn.pixabay.com/photo/2020/04/02/11/37/football-pitch-4994688_960_720.jpg')]">
     
     <nav class="flex items-center justify-between bg-black">
-        <!-- <div class="font-extrabold p-3 pt 2 px-6 text-white">Football Manager</div> -->
         <div class="log">
             <img src="logo.jpeg" alt="">
         </div>
 
         <div class="hidden md:flex items-center">
-            <!-- <form class="mx-2" type="input" action="">
-                <input type="text">
-                <button class="font-medium bg-white px-2">Submit</button>
-            </form> -->
+            
 
             <a href="/login"  id="btnLogin" class="p-2 px-3 mx-2 text-white border-2 border-white" >Login</a>
             <a href="/register" id="btnRegister" class="p-3 pt-3 px-6 text-white mx-2 rounded-full">Register</a>
@@ -51,33 +49,36 @@
                 <script>
                     const btnLogin = document.getElementById("btnLogin");
                     const btnRegister = document.getElementById("btnRegister");
-
+                    const afterlogin = document.getElementById("form-box");
+                   
                     btnLogin.style.display = "none";
                     btnRegister.style.display = "none";
 
+    
+                  
+
                 </script>
-             <a href="/register"  id="btnLogin" class="p-2 px-3 mx-2 text-white border-2 border-white" >Log Out</a>  
+             <a href="/register"  id="" class="p-2 px-3 mx-2 text-white border-2 border-white" >Log Out</a>  
             {{/if}}
 
             {{#if sucessLogin}}
                 <script>
                     const btnLogin = document.getElementById("btnLogin");
                     const btnRegister = document.getElementById("btnRegister");
-                    const afterlogin = document.getElementById("afterlogin");
+                    const afterlogin = document.getElementById("formbox");
 
                     btnLogin.style.display = "none";
                     btnRegister.style.display = "none";
 
-                    afterlogin.style.display = "none";
-
                     
                 </script>
-             <a href="/register"  id="btnLogin" class="p-2 px-3 mx-2 text-white border-2 border-white" >Log Out</a>  
+
+             <a href="/register"  id="" class="p-2 px-3 mx-2 text-white border-2 border-white" >Log Out</a>  
             {{/if}}
         </div>
     </nav>
 
-    <section id="afterlogin">
+    <section>
 
 
         <div class="grid justify-center w-screen md:flex items-center">
@@ -87,9 +88,9 @@
                 <img id="homeImage" src="1495644684fc-barcelona-2017-png-clipart.png">
             </div>
 
-            <div id="form-box" class="grid my-2 ">
-                <a class="font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRed" href='/newmanager'>Create New Team</a>
-                <hr class="h1">
+            <div id="formbox" class="grid my-2 ">
+                <a  class="font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRed" href='/newmanager'>Create New Team</a>
+                <hr  class="h1">
                 <a  class="font-black my-2 text-center p-3 pt-3 px-6  mx-20 rounded-xl bg-brightRed hover:bg-brightRedLight" href="#">Top Leagues</a>
             </div>
 

@@ -17,10 +17,10 @@ fetch(`players.json`)
                     </div>
                     <h2 id="pname">${element.pname}</h2>
                     <ul>
-                        <li id="pPosition" class="list">${element.position}</li>
-                        <li id="pCountry" class="list">${element.country}</li>
-                        <li id="pRating" class="list">${element.rating}</li>
-                        <button id=btnSign">Sign Contract</button>
+                        <li id="pPosition" class="list">Position: ${element.position}</li>
+                        <li id="pCountry" class="list">Country:${element.country}</li>
+                        <li id="pRating" class="list">Rating: ${element.rating}</li>
+                        <button class=btnSignContract" ><a href="/signnewplayer?pid=${element.pid}">Sign Contract</a></button>
                     </ul>
                 </div>
               `;
@@ -29,30 +29,7 @@ fetch(`players.json`)
     });
   });
 
-// playerData.forEach(element => {
-//     var li = document.createElement('li');
-//     list.appendChild(
-//         `
 
-//         `
-//     )
+const btnSignContract = document.getElementById('btnSignContract');
 
-// })
 
-// function showCard(id) {
-//     const matchedPlayerData = playerData.find((data) => data.pid === id)
-
-//     const pName = document.getElementById("pname")
-//     const pImage = document.getElementById("card-image")
-//     const pPosition = document.getElementById("pPosition")
-//     const pCountry = document.getElementById("pCountry")
-//     const pRating = document.getElementById("pRating")
-
-//     pName.innerText = `${matchedPlayerData.pname}`
-//     pPosition.innerText = `Position: ${matchedPlayerData.position}`
-//     pCountry.innerText = `Country: ${matchedPlayerData.country}`
-//     pRating.innerText = `Rating: ${matchedPlayerData.rating}`
-//     pImage.style.backgroundImage = `url(${matchedPlayerData.image})`
-
-//     console.log(pName)
-// }

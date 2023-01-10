@@ -80,6 +80,14 @@ app.get(`/newmanager`,(req,res)=>{
     res.render("newmanager")
 })
 
+app.get(`/teamformation`,(req,res)=>{
+    res.render("teamFormation")
+})
+
+app.get(`/signcontract`,(req,res)=>{
+    res.render("signContract")
+})
+
 
 let mid = null;
 
@@ -92,22 +100,23 @@ app.get("/managerinputs",(req,res)=>{
         if(err){
             res.render('newmanager',{minputErr:true})
         }else{
-            res.render('newmanager',{minput:true})
 
-            mysql.query("select mid from mananger where uid=?",[uid],(err, result) =>{
+            mysql.query("select mid from manager where uid=?",[uid],(err, result) =>{
                 if(err){
+                    console.log(err);
                     res.render('login',{errlogin:true});
                 }else{
-                    res.render('index',{sucessLogin:true})
+                    
                     mid = result[0].mid;
+                    res.render('newManager',{sucessLogin:true})
                 }})
-
-
         }
     });
 
 
 })
+
+let clubid = null;
 
 app.get('/clubinputs',(req, res)=>{
 
@@ -117,14 +126,55 @@ app.get('/clubinputs',(req, res)=>{
     
     mysql.query(qry,[clubname,clubformation,mid],(err,result)=>{
         if(err){
-            res.render('teamFormation',{cinputErr:true})
+            console.log(err);
+            res.render('newManager')
         }else{
-            res.render('teamFormation',{cinputErr:false})
+
+            mysql.query("select clubid from club where mid=?",[mid],(err, results) =>{
+            if(err){
+                console.log(err);
+                res.render('newManager');
+            }else{
+               
+                clubid = results[0].clubid;
+                console.log(clubid)
+                res.render('teamFormation')
+            }})
+
         }
     });
    
 
 })
+
+let pid = null;
+
+app.get('/signnewplayer',(req, res)=>{
+    pid = req.query.pid;
+    console.log(pid)
+    res.render('signContract');
+})
+
+app.get('/signplayerwithpos',(req, res)=>{
+    
+    const position = req.query;
+ 
+    let qry = "insert into club(clubname,clubformation,mid) values(?,?,?)"
+    
+    mysql.query(qry,[clubname,clubformation,mid],(err,result)=>{
+        if(err){
+            console.log(err);
+            res.render('newManager')
+        }else{
+
+
+        }
+    });
+
+
+})
+
+
 
 
 app.get("/globalplayers",(req,res)=>{
