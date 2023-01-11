@@ -150,30 +150,40 @@ app.get('/clubinputs',(req, res)=>{
 let pid = null;
 
 app.get('/signnewplayer',(req, res)=>{
-    pid = req.query.pid;
+    pid = Number(req.query.pid);
     console.log(pid)
     res.render('signContract');
 })
+
+
+
 
 app.get('/signplayerwithpos',(req, res)=>{
     
     const position = req.query.position;
     console.log(position);
+    console.log(pid);
+
+
+    let qry = `insert into clubformation(clubid,${position}) values(?,?)`;
+
+
+    try{
+        mysql.query(qry,[clubid,pid],(err,result)=>{
+            res.render('teamFormation')
+        })
+    }
+    catch(err){
+        console.log(err);
+        let qry1 = `UPDATE clubformation SET ${position}=? WHERE clubid=?`;
+
+        mysql.query(qry1,[pid,clubid],(err,result)=>{
+            res.render('teamFormation')
+
+        })
+    }
  
-    let qry = `insert into clubformation(${position}) values(?)`
-    
-    mysql.query(qry,[pid],(err,result)=>{
-        if(err){
-            console.log(err);
-            res.render('teamFormation')
-        }else{
-            
-            res.render('teamFormation')
-        }
-    });
-
-
-})
+});
 
 
 

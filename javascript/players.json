@@ -181,6 +181,30 @@
     "country": "Egypt",
     "rating": "88",
     "image": "https://www.footballdatabase.eu/images/photos/players/a_69/69529.jpg"
+},
+{
+    "pid": 24,
+    "pname": "Darren Dsa",
+    "position": "gk",
+    "country": "Kulshekar",
+    "rating": "120",
+    "image": "https://www.linkpicture.com/q/WhatsApp-Image-2023-01-10-at-11.55.38-AM.jpeg"
+},
+{
+    "pid": 25,
+    "pname": "Wilson Aranha",
+    "position": "st",
+    "country": "belvai",
+    "rating": "120",
+    "image": "https://www.linkpicture.com/q/317720329_896143398222439_7465067592001972942_nwilsondp.jpg"
+},
+{
+    "pid": 26,
+    "pname": "Emlyn Dcunha",
+    "position": "gk",
+    "country": "Belvai",
+    "rating": "120",
+    "image": "https://www.linkpicture.com/q/WhatsApp-Image-2023-01-10-at-12.00.00-PM.jpeg"
 }
 
 ]
