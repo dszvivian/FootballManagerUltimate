@@ -3,6 +3,7 @@ body {
 	background: #34495e;
 	font-family: "Open Sans", sans-serif;
 	cursor: default;
+	/* overflow: hidden; */
 }
 
 header {
@@ -156,4 +157,92 @@ main {
 	/* fix this below code-- it overflows */
 	margin-right:10rem;
  }
+
+
+
+
+ /* new Manager css */
+
+ .leftImage{
+    float:left;  
+    margin-left:8rem;
+  }
+  
+  .leftImage img{
+      width:relative;
+      height:100vh;
+  }
+  
+  
+  .rightform{
+      position:relative;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      padding:10rem; 
+  }
+  
+  
+  .formchild{
+      display:grid;
+      margin:1rem;
+  }
+  
+  #f1{
+      width:relative;
+      height:relative;
+      padding:2rem;
+      background-color:#ffffff;
+      border-radius: 30px;
+  }
+  
+  #f2{
+      width:relative;
+      height:relative;
+      padding:2rem;
+      margin-top:1rem;
+      background-color:#ffffff;
+      border-radius: 30px;
+  }
+  
+  
+  
+  .form-heading{
+      text-align:center;
+  }
+  
+  .form-input{
+      align-items:center;
+      padding:1em;
+      margin:1em;
+  }
+  
+  .form-submit{
+      align-items:center;
+      background-color:#00ffa1;
+      padding: 0.5rem;
+      font-size: 1rem;
+      font-weight:bold;
+  }
+  
+  
+  @media only screen and (max-width:1000px) {
+  
+      .leftImage{
+          display: none;
+      }
+  
+      .formFields{
+          width:100vh;
+      }
+  
+  }
+
+
+  //extras
+
+
+  .box1{
+    display:grid;
+  }
 

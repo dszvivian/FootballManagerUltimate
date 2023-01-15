@@ -11,22 +11,7 @@
 	<main>
 
 		{{#result}}
-			{{!-- <input type="text" value="2" id="clubid" hidden>
-			<input type="text" value="{{gk}}" id="gk" hidden>
-			<input type="text" value="{{lb}}" id="lb" hidden>
-			<input type="text" value="{{lcb}}" id="lcb" hidden>
-			<input type="text" value="{{rcb}}" id="rcb" hidden>
-			<input type="text" value="{{rb}}" id="rb" hidden>
-			<input type="text" value="{{lm}}" id="lm" hidden>
-			<input type="text" value="{{cm}}" id="cm" hidden>
-			<input type="text" value="{{rm}}" id="rm" hidden>
-			<input type="text" value="{{lw}}" id="lw" hidden>
-			<input type="text" value="{{st}}" id="st" hidden>
-			<input type="text" value="{{rw}}" id="rw" hidden>
-			<input type="text" value="{{sub1}}" id="sub1" hidden>
-			<input type="text" value="{{sub2}}" id="sub2" hidden>
-			<input type="text" value="{{sub3}}" id="sub3" hidden>
-			<input type="text" value="{{sub4}}" id="sub4" hidden> --}}
+	
 		
 
 		<div class="pitch">
@@ -59,6 +44,24 @@
 		<!--442-->
 		<main>
 
+			<ul>
+				<li><div id="side-card">{{gk}}<button><a href="/deleteplayer?position=gk">Delete</a></button></div></li>
+				<li><div id="side-card">{{lb}}<button><a href="/deleteplayer?position=lb">Delete</a></button></div></li>
+				<li><div id="side-card">{{lcb}}<button><a href="/deleteplayer?position=lcb">Delete</a></button></div></li>
+				<li><div id="side-card">{{rcb}}<button><a href="/deleteplayer?position=rcb">Delete</a></button></div></li>
+				<li><div id="side-card">{{rb}}<button><a href="/deleteplayer?position=rb">Delete</a></button></div></li>
+				<li><div id="side-card">{{lm}}<button><a href="/deleteplayer?position=lm">Delete</a></button></div></li>
+				<li><div id="side-card">{{cm}}<button><a href="/deleteplayer?position=cm">Delete</a></button></div></li>
+				<li><div id="side-card">{{lw}}<button><a href="/deleteplayer?position=lw">Delete</a></button></div></li>
+				<li><div id="side-card">{{st}}<button><a href="/deleteplayer?position=st">Delete</a></button></div></li>
+				<li><div id="side-card">{{rw}}<button><a href="/deleteplayer?position=rw">Delete</a></button></div></li>
+				<li><div id="side-card">{{sub1}}<button><a href="/deleteplayer?position=sub1">Delete</a></button></div></li>
+				<li><div id="side-card">{{sub2}}<button><a href="/deleteplayer?position=sub2">Delete</a></button></div></li>	
+				<li><div id="side-card">{{sub3}}<button><a href="/deleteplayer?position=sub3">Delete</a></button></div></li>	
+				<li><div id="side-card">{{sub4}}<button><a href="/deleteplayer?position=sub4">Delete</a></button></div></li>	
+			</ul>
+
+
 			
 		{{/result}}
 
@@ -66,20 +69,23 @@
 
 			<!-- player Card-->
 
-<div id="card" class="card-container">
-	<div class="card" >
-		<div class="card-image" id="player-image">
-	  </div>
-	  <h2 id="player-name"></h2>
-	   <ul>
-		  <li class="list" id="player-club"></li>
-		  <li class="list" id="player-country"></li>
-		  <li class="list" id="player-skills"></li>
-		  <li class="list" id="player-rating"></li>
-	   </ul>
-	  </div>
-</div>
-			
+	<div id="card" class="card-container">
+		<div class="card" >
+			<div class="card-image" id="player-image">
+		</div>
+		<h2 id="player-name"></h2>
+		<ul>
+			<li class="list" id="player-club"></li>
+			<li class="list" id="player-country"></li>
+			<li class="list" id="player-skills"></li>
+			<li class="list" id="player-rating"></li>
+		</ul>
+		</div>
+	</div>
+
+	
+
+	
 
 
 	<script  src="formation.js"></script>
