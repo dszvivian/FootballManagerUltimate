@@ -80,9 +80,7 @@ app.get(`/newmanager`,(req,res)=>{
     res.render("newmanager")
 })
 
-app.get(`/teamformation`,(req,res)=>{
-    res.render("teamFormation")
-})
+
 
 app.get(`/signcontract`,(req,res)=>{
     res.render("signContract")
@@ -138,12 +136,30 @@ app.get('/clubinputs',(req, res)=>{
                
                 clubid = results[0].clubid;
                 console.log(clubid)
-                res.render('teamFormation')
+                res.redirect('/teamformation');
             }})
 
         }
     });
    
+
+})
+
+
+app.get(`/teamformation`,(req,res)=>{
+
+    let qry  = 'select * from clubformation where clubid=?'
+
+    try{
+        mysql.query(qry,[clubid],(err,result)=>{
+            console.log(result);
+            res.render("teamFormation",{result:result})
+        });
+
+    }
+    catch(err) {
+        res.send(err)
+    }
 
 })
 
@@ -158,32 +174,68 @@ app.get('/signnewplayer',(req, res)=>{
 
 
 
+// app.get('/signplayerwithpos',(req, res)=>{
+    
+//     const position = req.query.position;
+//     console.log(`position: ${position}`);
+//     console.log(pid);
+//     console.log(clubid)
+
+
+
+    
+
+
+//     try{
+//         let qry = `insert into clubformation(clubid,${position}) values(?,?)`;
+//         mysql.query(qry,[clubid,pid],(err,result)=>{
+//             res.redirect('/teamformation');
+//         })
+//     }
+//     catch(err){
+        
+//         let qry = `UPDATE clubformation SET ${position}=${pid} WHERE clubid=${clubid}`;
+
+//         mysql.query(qry,[],(err,result)=>{
+//             res.redirect('/teamformation');
+//         })
+
+//         if(err){
+//             console.log(err);
+//         }
+        
+//     }
+ 
+// });
+
 app.get('/signplayerwithpos',(req, res)=>{
     
     const position = req.query.position;
-    console.log(position);
-    console.log(pid);
-
-
+ 
     let qry = `insert into clubformation(clubid,${position}) values(?,?)`;
 
+    mysql.query(qry,[clubid,pid],(err,result)=>{
 
-    try{
-        mysql.query(qry,[clubid,pid],(err,result)=>{
-            res.render('teamFormation')
-        })
-    }
-    catch(err){
-        console.log(err);
-        let qry1 = `UPDATE clubformation SET ${position}=? WHERE clubid=?`;
+        if(err){
+            console.log(err);
 
-        mysql.query(qry1,[pid,clubid],(err,result)=>{
-            res.render('teamFormation')
+            let qry = `UPDATE clubformation SET ${position}=${pid} WHERE clubid=${clubid}`;
 
-        })
-    }
+            mysql.query(qry,[],(err,result)=>{
+
+                if(err) throw err;
+                else{
+                    res.redirect('/teamformation');
+                }
+            })
+
+        }else{
+            res.redirect('/teamformation');
+        }
+    })
  
 });
+
 
 
 
