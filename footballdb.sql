@@ -22,7 +22,7 @@ create table club(
 
 
 create table clubformation(
-    column clubid int not null primary key,
+    clubid int primary key,
     gk int ,
     lb int ,
     lcb int ,
