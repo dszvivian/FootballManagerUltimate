@@ -171,6 +171,21 @@ app.get('/signnewplayer',(req, res)=>{
     res.render('signContract');
 })
 
+app.get('/deleteplayer',(req, res)=>{
+
+    const  po = req.query.position;
+ 
+    let qry = `UPDATE clubformation SET ${po}=null WHERE clubid=${clubid}`;
+
+    mysql.query(qry,[],(err,result)=>{
+        console.log(result);
+        res.redirect('/teamformation');
+    });
+    
+    
+    
+})
+
 
 
 
