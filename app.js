@@ -274,6 +274,35 @@ app.get("/globalplayers", (req, res) => {
 
 app.get("/myteam", (req, res) => {
 
+  let qry = `select mid from manager where uid=${uid};`;
+
+  mysql.query(qry, [],(err, result) => {
+
+    if(err){
+      console.log(err);
+    }else{
+      console.log(`uid: ${uid}`);    
+      console.log(`mid: ${result[0]["mid"]}`);   
+      mid = result[0]["mid"];
+      let qry = `select clubid from club where mid=${mid}`;
+
+      mysql.query(qry, [],(err, result) =>{
+        if(err){
+          console.log(err);
+        }else{
+          console.log(`clubid: ${result[0]["clubid"]}`);   
+          clubid = result[0]["clubid"];
+
+          res.redirect("/teamformation");
+        }
+      });
+
+      
+
+    }
+
+  })
+
 
 })
 
