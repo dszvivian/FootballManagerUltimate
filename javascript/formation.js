@@ -12,7 +12,7 @@ const player10 = document.getElementById("p10")
 const player11 = document.getElementById("p11")
 
 
-fetch(`players.json`)
+fetch(`http://localhost:5000/allplayersApi`)
   .then(function (response) {
     return response.json();
   })

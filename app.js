@@ -225,6 +225,16 @@ app.get("/deleteplayer", (req, res) => {
 
 // });
 
+app.get("/allplayersApi",(req, res)=>{
+   
+    let qry = 'select * from player';
+
+    mysql.query(qry,[],(err,result)=>{
+        res.json(result);
+    })
+    
+});
+
 app.get("/signplayerwithpos", (req, res) => {
   const position = req.query.position;
 
@@ -248,11 +258,7 @@ app.get("/signplayerwithpos", (req, res) => {
   });
 });
 
-// app.get("/globalplayers",(req,res)=>{
-//     res.render("globalplayers")
-// })
 
-//under testing
 app.get("/globalplayers", (req, res) => {
   let qry = `select * from player`;
 
@@ -265,4 +271,12 @@ app.get("/globalplayers", (req, res) => {
     }
   });
 });
+
+app.get("/myteam", (req, res) => {
+
+
+})
+
+
+
 app.listen(port, () => console.log(`Listen on Port ${port}`));

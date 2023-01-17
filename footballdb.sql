@@ -8,7 +8,7 @@ CREATE TABLE users (
 CREATE TABLE manager (
     mid INT NOT NULL AUTO_INCREMENT , 
     mname VARCHAR(255) NOT NULL , 
-    uid INT NOT NULL , 
+    uid INT NOT NULL unique, 
     PRIMARY KEY (mid),
     foreign key(uid) references users(uid)on delete cascade);
 
@@ -17,7 +17,7 @@ create table club(
     clubid int primary key auto_increment,
     clubname varchar(60) not null,
     clubformation varchar(10) not null,
-    mid int not null, 
+    mid int not null unique, 
     foreign key(mid) references manager(mid) on delete cascade);
 
 
@@ -48,4 +48,5 @@ create table clubformation(
         position varchar(10),
         country varchar(255),
         rating varchar(10),
-        image varchar(255) );
+        image varchar(255)
+        );
