@@ -156,4 +156,13 @@ main {
 	/* fix this below code-- it overflows */
 	margin-right:10rem;
  }
+ .ul li{
+	 list-style: none;
+ }
 
+.delete-btn{
+	background-color:#47815f;
+}
+.ul li a:link{
+	text-decoration: none;
+}
