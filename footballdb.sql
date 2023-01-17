@@ -40,3 +40,12 @@ create table clubformation(
     sub4 int ,
     foreign key(clubid) references club(clubid) on delete cascade
     );
+
+
+    create table player(
+        pid int primary key,
+        pname varchar(255),
+        position varchar(10),
+        country varchar(255),
+        rating varchar(10),
+        image varchar(255) );
