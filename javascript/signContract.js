@@ -4,32 +4,32 @@ const pid = urlParams.get('pid')
 
 console.log(pid);
 
-fetch(`players.json`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (obj) {
-        console.log(obj);
+// fetch(`players.json`)
+//     .then(function (response) {
+//         return response.json();
+//     })
+//     .then(function (obj) {
+//         console.log(obj);
         
 
-        const matchedPlayerData = obj[pid-1]
+//         const matchedPlayerData = obj[pid-1]
 
-        console.log(matchedPlayerData);
+//         console.log(matchedPlayerData);
 
-        const pName = document.getElementById("player-name")
-        const pImage = document.getElementById("player-image")
-        const pCountry = document.getElementById("player-country")
-        const pRating = document.getElementById("player-rating")
-        const pPosition = document.getElementById("player-position")
+//         const pName = document.getElementById("player-name")
+//         const pImage = document.getElementById("player-image")
+//         const pCountry = document.getElementById("player-country")
+//         const pRating = document.getElementById("player-rating")
+//         const pPosition = document.getElementById("player-position")
 
-        pName.innerText = matchedPlayerData.pname
-        pPosition.innerText = matchedPlayerData.position
-        pCountry.innerText = matchedPlayerData.country
-        pRating.innerText = matchedPlayerData.rating
-        pImage.style.backgroundImage = `url(${matchedPlayerData.image})`
+//         pName.innerText = matchedPlayerData.pname
+//         pPosition.innerText = matchedPlayerData.position
+//         pCountry.innerText = matchedPlayerData.country
+//         pRating.innerText = matchedPlayerData.rating
+//         pImage.style.backgroundImage = `url(${matchedPlayerData.image})`
         
 
-    })
+//     })
 
 
     // const btnSignContract = document.getElementById('btnSubmitname')

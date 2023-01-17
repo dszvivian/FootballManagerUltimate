@@ -13,6 +13,20 @@
     <section >
 
         <ul id="plist" class="player-list">
+                {{#each res}}
+                    <div class="card">
+                    <div id="card-image" class="card-image" style="background-image: url({{this.image}});">
+                    </div>
+                    <h2 id="pname">{{this.pname}}</h2>
+                    <ul>
+                        <li id="pPosition" class="list">Position: {{this.position}}</li>
+                        <li id="pCountry" class="list">Country:{{this.country}}</li>
+                        <li id="pRating" class="list">Rating: {{this.rating}}</li>
+                        <button class=btnSignContract" ><a href="/signnewplayer?pid={{this.pid}}">Sign Contract</a></button>
+                    </ul>
+                </div>
+                {{/each}}
+        </ul>
                     
          
         </ul>

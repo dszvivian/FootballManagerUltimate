@@ -14,16 +14,20 @@
 
     <div class="maindiv">
 
+        {{#res}}
+
         <div class="card">
-          <div id="player-image" class="card-image">
+          <div id="player-image" class="card-image" style="background-image: url({{image}});">
         </div>
-        <h2 id="player-name">Messi</h2>
+        <h2 id="player-name">{{pname}}</h2>
          <ul>
-            <li id="player-country" class="list">Country:Argentina</li>
-            <li id="player-position" class="list">Position:La Cruqeta</li>
-            <li id="player-rating" class="list">Rating:5</li>
+            <li id="player-country" class="list">{{country}}</li>
+            <li id="player-position" class="list">{{position}}</li>
+            <li id="player-rating" class="list">{{rating}}</li>
          </ul>
         </div>
+
+        {{/res}}
 
 
         <div id="f2" class="formField2">
