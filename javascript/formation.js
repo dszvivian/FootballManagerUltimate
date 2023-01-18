@@ -97,13 +97,21 @@ fetch(`http://localhost:5000/allplayersApi`)
     player11.addEventListener("mouseout", hideCard)
 
 
-
+    const pName = document.getElementById("player-name")
+    const pImage = document.getElementById("player-image")
+    const pClub = document.getElementById("player-club")
+    const pCountry = document.getElementById("player-country")
+    const pSkills = document.getElementById("player-skills")
+    const pRating = document.getElementById("player-rating")
 
 
 function showCard(id) {
+    console.log(`id : ${id}`)
+ 
+        
 
-    if(id == undefined){
-
+    if(id === null){
+        
     }else{
         card.style.display = "flex"
         console.log(`id : ${id}`)
@@ -116,12 +124,7 @@ function showCard(id) {
         console.log(matchedPlayerData)
       
     
-        const pName = document.getElementById("player-name")
-        const pImage = document.getElementById("player-image")
-        const pClub = document.getElementById("player-club")
-        const pCountry = document.getElementById("player-country")
-        const pSkills = document.getElementById("player-skills")
-        const pRating = document.getElementById("player-rating")
+        
     
         pName.innerText = matchedPlayerData[0].pname
         pCountry.innerText = matchedPlayerData[0].country
@@ -135,6 +138,11 @@ function showCard(id) {
 
 function hideCard() {
     card.style.display = "none"
+    pName.innerText = "Select a Player"
+    pCountry.innerText = ""
+    pSkills.innerText = ""
+    pRating.innerText = ""
+    pImage.style.backgroundImage = `url(https://w7.pngwing.com/pngs/160/868/png-transparent-add-friend-add-user-user-add-add-account-friend-3d-icon-thumbnail.png)`
 }
 
 

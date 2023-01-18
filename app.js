@@ -33,6 +33,7 @@ let uid = null;
 app.get("/loginuser", (req, res) => {
   const { email, password } = req.query;
 
+
   let qry = "select * from users where uemail=? and upassword=?";
 
   mysql.query(qry, [email, password], (err, result) => {
@@ -47,6 +48,7 @@ app.get("/loginuser", (req, res) => {
 
 app.get("/registeruser", (req, res) => {
   const { username, email, password } = req.query;
+
 
   let qry = "insert into users(username,uemail,upassword) values(?,?,?)";
 
@@ -80,11 +82,11 @@ app.get(`/signcontract`, (req, res) => {
 });
 
 app.get(`/addnewplayers`, (req, res) => {
-  res.render("addPlayer", { res: result });
+  res.render("addPlayer");
 });
 
 app.get(`/addnewplayertodb`, (req, res) => {
-  const { pid, pname, position, country, rating, image } = req.query;
+  const {pname, position, country, rating, image } = req.query;
 
   let qry = "insert into player values(?,?,?,?,?,?)";
 

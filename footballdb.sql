@@ -1,5 +1,5 @@
 CREATE TABLE users ( 
-    userid int not null auto_increment primary key, 
+    uid int not null auto_increment primary key, 
     username  VARCHAR(255) NOT NULL unique, 
     email varchar(255) not null unique,
     uPassword INT NOT NULL );
@@ -43,7 +43,7 @@ create table clubformation(
 
 
     create table player(
-        pid int primary key,
+        pid int primary key auto_increment,
         pname varchar(255),
         position varchar(10),
         country varchar(255),
