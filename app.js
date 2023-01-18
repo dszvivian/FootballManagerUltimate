@@ -162,12 +162,29 @@ app.get("/clubinputs", (req, res) => {
 
 app.get(`/teamformation`, (req, res) => {
   let qry = "select * from clubformation where clubid=?";
+  let qry2 = "select * from club where clubid=?";
 
   try {
-    mysql.query(qry, [clubid], (err, result) => {
-      console.log(result);
-      res.render("teamFormation", { result: result });
+
+    mysql.query(qry2, [clubid], (err, result) => {
+      
+      if(err){
+        console.log(err);
+      }else{
+
+        let clubinfo = result;
+
+        mysql.query(qry, [clubid], (err, result) => {
+          console.log(result);
+          res.render("teamFormation", { result: result , clubinfo: clubinfo});
+        });
+      }
+
+
+      
     });
+
+    
   } catch (err) {
     res.send(err);
   }
