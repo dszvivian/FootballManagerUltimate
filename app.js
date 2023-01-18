@@ -33,6 +33,7 @@ let uid = null;
 app.get("/loginuser", (req, res) => {
   const { email, password } = req.query;
 
+
   let qry = "select * from users where uemail=? and upassword=?";
 
   mysql.query(qry, [email, password], (err, result) => {
@@ -47,6 +48,7 @@ app.get("/loginuser", (req, res) => {
 
 app.get("/registeruser", (req, res) => {
   const { username, email, password } = req.query;
+
 
   let qry = "insert into users(username,uemail,upassword) values(?,?,?)";
 
@@ -80,11 +82,11 @@ app.get(`/signcontract`, (req, res) => {
 });
 
 app.get(`/addnewplayers`, (req, res) => {
-  res.render("addPlayer", { res: result });
+  res.render("addPlayer");
 });
 
 app.get(`/addnewplayertodb`, (req, res) => {
-  const { pid, pname, position, country, rating, image } = req.query;
+  const {pname, position, country, rating, image } = req.query;
 
   let qry = "insert into player values(?,?,?,?,?,?)";
 
@@ -225,6 +227,16 @@ app.get("/deleteplayer", (req, res) => {
 
 // });
 
+app.get("/allplayersApi",(req, res)=>{
+   
+    let qry = 'select * from player';
+
+    mysql.query(qry,[],(err,result)=>{
+        res.json(result);
+    })
+    
+});
+
 app.get("/signplayerwithpos", (req, res) => {
   const position = req.query.position;
 
@@ -248,11 +260,7 @@ app.get("/signplayerwithpos", (req, res) => {
   });
 });
 
-// app.get("/globalplayers",(req,res)=>{
-//     res.render("globalplayers")
-// })
 
-//under testing
 app.get("/globalplayers", (req, res) => {
   let qry = `select * from player`;
 
@@ -265,4 +273,41 @@ app.get("/globalplayers", (req, res) => {
     }
   });
 });
+
+app.get("/myteam", (req, res) => {
+
+  let qry = `select mid from manager where uid=${uid};`;
+
+  mysql.query(qry, [],(err, result) => {
+
+    if(err){
+      console.log(err);
+    }else{
+      console.log(`uid: ${uid}`);    
+      console.log(`mid: ${result[0]["mid"]}`);   
+      mid = result[0]["mid"];
+      let qry = `select clubid from club where mid=${mid}`;
+
+      mysql.query(qry, [],(err, result) =>{
+        if(err){
+          console.log(err);
+        }else{
+          console.log(`clubid: ${result[0]["clubid"]}`);   
+          clubid = result[0]["clubid"];
+
+          res.redirect("/teamformation");
+        }
+      });
+
+      
+
+    }
+
+  })
+
+
+})
+
+
+
 app.listen(port, () => console.log(`Listen on Port ${port}`));
