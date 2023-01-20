@@ -15,7 +15,7 @@ A Simple Football Database Management System.
 
 ## Screenshots
 
-<img src="https://i.ibb.co/cYJxVNq/ss-Sign-Contract-Page.png" width="500" height="600">
+<img src="https://i.ibb.co/cYJxVNq/ss-Sign-Contract-Page.png" width="100%" height="100%">
 <img src="https://i.ibb.co/K2fym7p/ss-Formation.png" width="500" height="600">
 <img src="https://i.ibb.co/B3sK01v/ss-Home-Page.png" width="500" height="600">
 <img src="https://i.ibb.co/KW3yPt6/ss-Players.png" width="500" height="600">
