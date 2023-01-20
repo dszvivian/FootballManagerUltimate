@@ -95,6 +95,7 @@ app.get(`/addnewplayertodb`, (req, res) => {
     [pid, pname, position, country, rating, image],
     (err, result) => {
       if (err) {
+        console.log(err);
       } else {
         res.redirect("/globalplayers");
       }

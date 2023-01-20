@@ -64,4 +64,7 @@ create table clubformation(
         country varchar(255),
         rating varchar(10),
         image varchar(255)
-        );
+    );
+
+
+CREATE TRIGGER `new_user_added` AFTER INSERT ON `log` FOR EACH ROW INSERT INTO log (message, date_created) VALUES ('A new user was added to the system', NOW());
