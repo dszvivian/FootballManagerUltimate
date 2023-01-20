@@ -15,9 +15,10 @@ A Simple Football Database Management System.
 
 ## Screenshots
 
-
-<a href="https://ibb.co/cYJxVNq"><img src="https://i.ibb.co/cYJxVNq/ss-Sign-Contract-Page.png" alt="ss-Sign-Contract-Page" border="0"></a> <a href="https://ibb.co/K2fym7p"><img src="https://i.ibb.co/K2fym7p/ss-Formation.png" alt="ss-Formation" border="0"></a> <a href="https://ibb.co/B3sK01v"><img src="https://i.ibb.co/B3sK01v/ss-Home-Page.png" alt="ss-Home-Page" border="0"></a> <a href="https://ibb.co/KW3yPt6"><img src="https://i.ibb.co/KW3yPt6/ss-Players.png" alt="ss-Players" border="0"></a>
-
+<img src="https://i.ibb.co/cYJxVNq/ss-Sign-Contract-Page.png" width="100%" height="100%">
+<img src="https://i.ibb.co/K2fym7p/ss-Formation.png"  width="100%" height="100%">
+<img src="https://i.ibb.co/B3sK01v/ss-Home-Page.png"  width="100%" height="100%">
+<img src="https://i.ibb.co/KW3yPt6/ss-Players.png"  width="100%" height="100%">
 
 
 ## 🔗 Links
